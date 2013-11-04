@@ -49,7 +49,9 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # Heroku Crap
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+end
 
 # Which version of Ruby
 ruby "2.0.0"
