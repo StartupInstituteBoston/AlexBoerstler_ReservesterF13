@@ -28,6 +28,10 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     builder (3.1.4)
+    carrierwave (0.9.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
     chunky_png (1.2.9)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -42,6 +46,9 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    dotenv (0.9.0)
+    dotenv-rails (0.9.0)
+      dotenv (= 0.9.0)
     erubis (2.7.0)
     execjs (2.0.2)
     fssm (0.2.10)
@@ -123,8 +130,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  carrierwave
   coffee-rails (~> 4.0.0)
   compass-rails
+  dotenv-rails
   jbuilder (~> 1.2)
   jquery-rails
   pg

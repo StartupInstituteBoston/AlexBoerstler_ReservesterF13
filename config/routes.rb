@@ -5,6 +5,9 @@ LabOne::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  # Pascal magic
+  resources :restaurants
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -53,7 +56,5 @@ LabOne::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-  resources :restaurants, only: [ :index ]
 
 end

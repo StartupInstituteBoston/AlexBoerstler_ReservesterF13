@@ -48,6 +48,12 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Using Carrier Wave for file uploads
+gem 'carrierwave'
+
+# dotenv for fun, profit, and not pushing my AWS key to github
+gem 'dotenv-rails', :groups => [:development, :test]
+
 # Heroku Crap
 group :production do
   gem 'rails_12factor'
