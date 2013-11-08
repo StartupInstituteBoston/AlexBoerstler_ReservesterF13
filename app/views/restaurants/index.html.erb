@@ -6,9 +6,11 @@
 			<%= link_to 'Add Restaurant', new_restaurant_path, { :class => 'button'} %>
 			<% @restaurants.each do |restaurant| %>
 				<div class="restaurant-list">
-					<h4><%= link_to restaurant.name %></h4>
+					<h4><%= link_to restaurant.name, restaurant_path(restaurant) %></h4>
 					<p>Located in <%= restaurant.city %>, <%= restaurant.state %></p>
 					<%= link_to 'Edit', edit_restaurant_path(@restaurant), :class => "tiny button success" %>
+					<%= link_to 'Destroy', restaurant_path(restaurant),
+                    method: :delete, data: { confirm: 'Are you sure you want to destroy this poor restaurant?' }, :class => "tiny button alert" %>
 				</div>
 			<% end %>
 		</div>
