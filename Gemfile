@@ -51,6 +51,13 @@ end
 # Using Carrier Wave for file uploads
 gem 'carrierwave'
 
+# Testing Stuff (this should really be in a group)
+gem 'rspec'
+gem 'rspec-rails'
+gem "factory_girl_rails", "~> 4.0"
+gem 'database_cleaner'
+gem 'capybara'
+
 # dotenv for fun, profit, and not pushing my AWS key to github
 gem 'dotenv-rails', :groups => [:development, :test]
 
