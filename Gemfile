@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # Use Zurb's Foundation framework w/ Compass
-gem 'compass-rails' # you need this or you get an err
+gem 'compass-rails' # Foundation Dependency
 gem 'zurb-foundation', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
