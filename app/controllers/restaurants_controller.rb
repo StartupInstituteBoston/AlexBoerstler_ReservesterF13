@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
 		@restaurants = Restaurant.order(:name)
 	end
 	def show
-		@restaurant = Restaurant.find(params[:id])
+		@restaurant = Restaurant.find_by(id: params[:id])
 	end
 	def new
 		@restaurant = Restaurant.new
