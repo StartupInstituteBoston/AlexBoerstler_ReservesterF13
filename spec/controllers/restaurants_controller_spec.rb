@@ -12,7 +12,7 @@ describe RestaurantsController do
 	end
 
 	describe "#show" do
-		let(:restaurant) { FactoryGirl.build:restaurant) }
+		let(:restaurant) { FactoryGirl.create(:restaurant) }
 
 		it "should assign restaurant model to the restaurant variable" do
 			get :show, id: restaurant.id
@@ -22,7 +22,14 @@ describe RestaurantsController do
 		end
 	end
 
-	# describe "#new" do 
+	describe "#new" do 
+		it "should render the new view" do
+			get :new
+			expect(response).to render_template("new")
+		end
+	end
+
+	# describe "#create" do
 
 	# end
 
@@ -50,6 +57,10 @@ describe RestaurantsController do
 	# 		assigns(:restaurant).should eq restaurant
 
 	# 	end
+	# end
+
+	# describe "#destroy" do
+
 	# end
 
 end

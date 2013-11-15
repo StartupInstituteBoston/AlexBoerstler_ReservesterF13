@@ -1,0 +1,32 @@
+!!!
+%html
+  %head
+    %title LabOne
+    = stylesheet_link_tag    "app", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .contain-to-grid
+      %nav.top-bar
+        %ul.title-area
+          / Title Area
+          %li.name
+            %h1
+              %a{:href => "/"} Reservster
+          / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+          %li.toggle-topbar.menu-icon
+            %a{:href => "#"}
+              %span Menu
+        %section.top-bar-section
+          / Right Nav Section
+          %ul.right
+            %li.divider
+            %li= link_to "Restaurants", controller: "restaurants"
+            %li.divider
+            %li
+              %a{:href => "#"} Log In
+            %li.divider
+            %li
+              %a{:href => "#", :class => "button"} Sign Up
+            %li.divider
+    = yield
